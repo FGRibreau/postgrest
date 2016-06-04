@@ -25,6 +25,20 @@ Also try other tools in the PostgREST
 [ecosystem](http://postgrest.com/install/ecosystem/) like the
 [ng-admin demo](http://marmelab.com/ng-admin-postgrest).
 
+### Usage docker
+
+```
+docker run -p 3000:3000 \
+  -e POSTGREST_VERSION=0.3.1.1 \
+  -e PG_PORT_5432_TCP_ADDR=localhost
+  -e PG_PORT_5432_TCP_PORT=1214 \
+  -e PG_ENV_POSTGRES_DB=database \
+  -e PG_ENV_POSTGRES_USER=serioususer \
+  -e PG_ENV_POSTGRES_PASSWORD=thisisasecret \
+  -e POSTGREST_SCHEMA=public
+  suzel/docker-postgrest
+```
+
 ### Usage
 
 1. Download the binary ([latest release](https://github.com/begriffs/postgrest/releases/latest))
